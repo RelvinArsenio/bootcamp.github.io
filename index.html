@@ -1,54 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Ganjil dan Genap</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 50%;
-            margin: 20px auto;
-        }
-
-        table, th, td {
-            border: 1px solid black;
-        }
-
-        th, td {
-            text-align: center;
-            padding: 10px;
-        }
-    </style>
+    <title>Introduce Front End</title>
 </head>
 <body>
-    <h2>Data Ganjil dan Genap</h2>
-    <table>
-        <tr>
-            <th>Ganjil</th>
-            <th>Genap</th>
-        </tr>
-        <?php
-            for ($i = 1; $i <= 5; $i++) {
-                echo "<tr>";
-
-                // Kolom Ganjil
-                echo "<td>";
-                if ($i % 2 != 0) {
-                    echo $i;
-                }
-                echo "</td>";
-
-                // Kolom Genap
-                echo "<td>";
-                if ($i % 2 == 0) {
-                    echo $i;
-                }
-                echo "</td>";
-
-                echo "</tr>";
-            }
-        ?>
-    </table>
+    <h1>Introduce Front End</h1>
+    <table border='1'><tr><th>Ganjil</th><th>Genap</th></tr><tr><td>1</td><td></td></tr><tr><td></td><td>2</td></tr><tr><td>3</td><td></td></tr><tr><td></td><td>4</td></tr><tr><td>5</td><td></td></tr></table>
 </body>
 </html>
