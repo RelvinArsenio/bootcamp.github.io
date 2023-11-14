@@ -1,9 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>Introduce Front End</title>
+    <title>Contoh Program Ganjil Genap</title>
 </head>
 <body>
-    <h1>Introduce Front End</h1>
+    <table border="1">
+        <tr>
+            <th>Ganjil</th>
+            <th>Genap</th>
+        </tr>
+        <?php
+        // inisialisasi variabel untuk menyimpan angka ganjil dan genap
+        $ganjil = "";
+        $genap = "";
+
+        // perulangan dari 1 sampai 5
+        for ($i = 1; $i <= 5; $i++) {
+            // jika angka adalah ganjil, tambahkan ke variabel ganjil
+            if ($i % 2 == 1) {
+                $ganjil .= $i . "<br>";
+            }
+            // jika angka adalah genap, tambahkan ke variabel genap
+            else {
+                $genap .= $i . "<br>";
+            }
+        }
+
+        // tampilkan variabel ganjil dan genap dalam tabel
+        echo "<tr>";
+        echo "<td>" . $ganjil . "</td>";
+        echo "<td>" . $genap . "</td>";
+        echo "</tr>";
+        ?>
+    </table>
 </body>
 </html>
