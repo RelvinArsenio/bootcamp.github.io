@@ -1,35 +1,53 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Contoh Program Ganjil Genap</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Ganjil dan Genap</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-    <table border="1">
+    <h2>Data Ganjil dan Genap</h2>
+    <table>
         <tr>
             <th>Ganjil</th>
             <th>Genap</th>
         </tr>
         <?php
-        // inisialisasi variabel untuk menyimpan angka ganjil dan genap
-        $ganjil = "";
-        $genap = "";
+            for ($i = 1; $i <= 5; $i++) {
+                echo "<tr>";
 
-        // perulangan dari 1 sampai 5
-        for ($i = 1; $i <= 5; $i++) {
-            // jika angka adalah ganjil, tambahkan ke variabel ganjil
-            if ($i % 2 == 1) {
-                $ganjil .= $i . "<br>";
-            }
-            // jika angka adalah genap, tambahkan ke variabel genap
-            else {
-                $genap .= $i . "<br>";
-            }
-        }
+                // Kolom Ganjil
+                echo "<td>";
+                if ($i % 2 != 0) {
+                    echo $i;
+                }
+                echo "</td>";
 
-        // tampilkan variabel ganjil dan genap dalam tabel
-        echo "<tr>";
-        echo "<td>" . $ganjil . "</td>";
-        echo "<td>" . $genap . "</td>";
-        echo "</tr>";
+                // Kolom Genap
+                echo "<td>";
+                if ($i % 2 == 0) {
+                    echo $i;
+                }
+                echo "</td>";
+
+                echo "</tr>";
+            }
         ?>
     </table>
 </body>
